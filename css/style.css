@@ -1,0 +1,964 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,100,300,500,700);
+@import url(http://fonts.googleapis.com/css?family=Volkhov:400italic);
+
+/* --------------------------------------------
+|					 >>> Common CSS <<<                | 
+----------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin: auto;
+}
+
+h3 {
+  font-size: 38px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 19px;
+  line-height: 28px;
+  margin: auto;
+  padding: 10px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+span {
+  color: red;
+}
+
+a,
+a:active,
+a:focus,
+a:active {
+  text-decoration: none !important;
+}
+
+.section-title {
+  margin-bottom: 0;
+}
+
+.section-title h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.section-title p {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  padding: 10px;
+}
+
+/* --------------------------------------------
+|					 >>> Start Header <<<               | 
+----------------------------------------------- */
+
+header {
+  background: #fff;
+  padding: 0;
+  z-index: 1;
+  position: sticky;
+}
+
+.head-container {
+  position: fixed;
+  width: 100vw;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1;
+}
+
+.logo {
+  width: 80px;
+  padding: 0 0 0 10px;
+}
+
+.main-nav {
+  margin-top: 5px;
+
+}
+
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: .99em;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+
+.navbar {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 330px) {
+
+  .navbar,
+  .main-nav {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navbar a {
+    font-size: 10px;
+    letter-spacing: 0;
+    padding: 0 0 0 10px;
+  }
+
+  .navbar .logo {
+    width: 60px;
+    padding: 0 0 10px 0;
+  }
+}
+
+
+@media (min-width: 330px) and (min-width: 769px) {
+
+  .navbar,
+  .main-nav {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navbar a {
+    font-size: 15px;
+    padding: 0 0 0 10px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 19px;
+    padding: 0 0 0 20px;
+  }
+
+}
+
+
+/* --------------------------------------------
+|			    		  >>> Video <<<                 | 
+----------------------------------------------- */
+
+video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.video-iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#video-iframe {
+  padding: 40px 0 80px 0;
+}
+
+
+/* --------------------------------------------
+|					 >>> Start Index <<<                | 
+----------------------------------------------- */
+
+/* --------------------------------------------
+|         <<< Start Slider >>>                |
+----------------------------------------------- */
+
+#slider {
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%;
+  padding: 200px 0 280px 0;
+  position: relative;
+}
+
+#slider:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #8b86a3, #322e40);
+  opacity: 0.8;
+}
+
+#slider .block {
+  color: #E3E3E4;
+}
+
+#slider .block h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 65px;
+  letter-spacing: 10px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  overflow: hidden;
+}
+
+#slider .block p {
+  font-size: 25px;
+  line-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+/* --------------------------------------------
+|					 >>> Start Content <<<              | 
+----------------------------------------------- */
+/* --------------------------------------------
+|         <<< Start Wrapper >>>               |
+----------------------------------------------- */
+
+#intro {
+  padding: 0;
+}
+
+#intro .block h2 {
+  padding-top: 35px;
+  line-height: 27px;
+  margin: 0;
+  text-align: left;
+}
+
+#intro .block p {
+  color: #7B7B7B;
+  padding-top: 20px;
+  text-align: left;
+}
+
+#intro .block img {
+  margin: 20px;
+  position: relative;
+  width: 100%;
+}
+
+#intro .section-title {
+  margin-bottom: 0px;
+}
+
+#intro .section-title p {
+  padding-top: 20px;
+}
+
+/* --------------------------------------------
+|					 >>> Start Feature <<<              | 
+----------------------------------------------- */
+
+#feature {
+  background: url("../img/feature-bg.webp");
+  background-position: 50% 94px;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: visible;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 100px 0;
+}
+
+#feature h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+#feature p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+#feature:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.8;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  z-index: 0;
+}
+
+button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+/* --------------------------------------------
+|         <<< Image Zoom Grid >>>             |
+----------------------------------------------- */
+
+.image-grid-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.trans {
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+.top {
+  display: flex;
+  width: 0 80vw 0 80vw;
+}
+
+.top ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.top ul li {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 25%;
+  padding: 0 05px 0 05px;
+  overflow: hidden;
+}
+
+.top ul li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  content: '';
+  color: white;
+  opacity: 0.4;
+  text-align: center;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.top ul li:hover::before {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.90);
+}
+
+.top ul li img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  position: relative;
+  top: -100%;
+
+  /*----------------->>> Image Transition <<<-------------------------*/
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+.lightbox:target {
+  outline: none;
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 1.2s ease;
+  -moz-transition: all 1.2s ease;
+  -ms-transition: all 1.2s ease;
+  -o-transition: all 1.2s ease;
+  -webkit-transition: all 1.2s ease;
+}
+
+.lightbox:target img {
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.features-box img {
+  width: 100%;
+}
+
+/*--
+	documentacion Start 
+--*/
+
+#documentacion {
+  padding-top: 40px;
+  text-align: center;
+}
+
+#documentacion .thumbnail {
+  padding-bottom: 70px;
+}
+
+
+/* ---------------------------------------------
+|         <<< Start Word Download >>>         |
+-----------------------------------------------*/
+
+#word {
+  background: url("../img/word-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px 10px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+#word:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.8;
+}
+
+#word h2 {
+  padding-bottom: 20px;
+  line-height: 33px;
+  margin: 0;
+  font-size: 30px;
+}
+
+#word p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------
+|					 >>> Start Features <<<              | 
+----------------------------------------------- */
+
+.column {
+  padding: 1em;
+}
+
+.card {
+  padding: 3.1em 1.25em;
+  text-align: center;
+  background: linear-gradient(0deg, #397ef6 10px, transparent 10px);
+  background-repeat: no-repeat;
+  background-position: 0 0.62em;
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+  border-radius: 0.5em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card .icon {
+  font-size: 2.5em;
+  height: 2em;
+  width: 2em;
+  margin: auto;
+  background-color: #397ef6;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.card .icon img {
+  font-size: 2em;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.icon:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  border: 0.12em solid #397ef6;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.card h3 {
+  font-size: 1.3em;
+  margin: 1em 0 1.4em 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #070024;
+}
+
+.card p {
+  line-height: 2em;
+  color: #625a71;
+}
+
+.card:hover {
+  background-position: 0;
+}
+
+.card:hover .icon:before {
+  height: 2.25em;
+  width: 2.25em;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 1em 7em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    padding: 0;
+  }
+
+  .card {
+    padding: 5em 2em;
+  }
+
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1em;
+  }
+}
+
+/* --------------------------------------------
+|					 >>> Start Social Icons <<<              | 
+----------------------------------------------- */
+
+i {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  margin: auto;
+  padding: 05px;
+}
+
+
+.me {
+  width: 400px;
+  margin: 90px auto;
+}
+
+.me p,
+.me h1 {
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.me p {
+  font-weight: 200;
+}
+
+.me span {
+  font-weight: bold;
+}
+
+.social {
+  position: fixed;
+  top: 230px;
+}
+
+.social ul {
+  padding: 12px;
+  transform: translate(-270px, 0);
+}
+
+.social ul li {
+  display: block;
+  margin: 4px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+
+.social img {
+  background: rgba(255, 255, 255, 0.36);
+  width: 30px;
+  padding: 04px;
+  border-radius: 30px;
+  transition: all 1s;
+}
+
+.social-icon {
+  text-align: right;
+}
+
+.social ul li:hover {
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.social ul li:hover a {
+  color: #000;
+}
+
+.social ul li:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  border-radius: 50%;
+  padding-top: 07px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: #ffffff;
+  transform: rotate(0deg);
+}
+
+/* --------------------------------------------
+|		     >>> MAPS IFRAME <<<                  | 
+----------------------------------------------- */
+
+.google-map,
+iframe {
+  position: relative;
+}
+
+.google-map #map iframe {
+  width: 100%;
+  height: 300px;
+  background-color: #ff432e;
+}
+
+#maps {
+  padding: 80px 0;
+}
+
+#maps .block h2 {
+  text-align: center;
+  line-height: 27px;
+  color: #5C5C5C;
+}
+
+#maps .block p {
+  color: #7B7B7B;
+  text-align: center;
+}
+
+#maps .counter-box li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin: 30px 0 30px;
+}
+
+#maps .counter-box li i {
+  font-size: 35px;
+}
+
+#maps .counter-box li h4 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#maps .counter-box li span {
+  color: #555;
+}
+
+#maps .maps-carousel .video-iframe {
+  text-align: center;
+  width: 75%;
+  height: 75%;
+  border: 1px solid #DEDEDE;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+#maps .maps-carousel .video-iframe img {
+  padding-bottom: 38px;
+}
+
+#maps .maps-carousel .video-iframe p {
+  line-height: 28px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+#maps .maps-carousel .video-iframe .user img {
+  padding-bottom: 0px;
+  border-radius: 500px;
+}
+
+#maps .maps-carousel .video-iframe .user p {
+  padding-bottom: 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #353241;
+}
+
+#maps .maps-carousel .video-iframe .user p span {
+  display: block;
+  color: #353241;
+  font-weight: 600;
+}
+
+#maps .maps-carousel .video-iframe div {
+  border: 1px solid #000000;
+  border-radius: 500px;
+  display: inline-block;
+  height: 10px;
+  margin-right: 15px;
+  width: 10px;
+}
+
+#maps .maps-carousel div.active .video-iframe {
+  background: #5C5C5C;
+  display: inline-block;
+  border: 0px;
+}
+
+/*--
+	footer Start 
+--*/
+footer {
+  background: #F5F5F5;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  line-height: 25px;
+  color: #919191;
+}
+
+footer a {
+  color: #595959;
+}
